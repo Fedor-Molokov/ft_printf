@@ -6,7 +6,7 @@
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 01:18:51 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 10:40:58 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 10:57:35 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	*ft_ftoa(long double n, int p, t_flags *f)
 
 int		calc_float(t_flags *f, va_list ap, char *buff, char *str)
 {
-	union longint_double	val;
+	union u_longint_double	val;
 	int						res;
 
 	res = 0;
