@@ -6,7 +6,7 @@
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 01:18:51 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 10:57:35 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:42:36 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ char	*ft_ftoa(long double n, int p, t_flags *f)
 	hd = ft_fract(&bufer, n - (long int)n, p);
 	if (!(entire = ft_itoa_base((long int)n + hd, 10)))
 		return (0);
-	if (!(rezult = ft_str_connection(entire, bufer, sign, p)))
+	if (!(rezult = ft_str_connect(entire, bufer, sign, p)))
 		return (0);
 	free(entire);
 	return (rezult);

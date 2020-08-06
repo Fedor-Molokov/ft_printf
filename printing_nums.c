@@ -6,7 +6,7 @@
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 16:12:39 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 10:50:37 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:50:39 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,30 +76,6 @@ int		only_weidth(char *s, int l, t_flags *f)
 			rx.space += 2;
 		}
 		f->print ? ft_putstr(s) : 1;
-		// if (f->print)
-		// {
-			// int i = 0;
-		// 	// return (rx.start);
-			// i = ft_strlen(s);
-		// 	s[i - 1] = '\0';
-		// 	// char *str = ft_strdup(s);
-		// 	// ft_putstr(str);
-		// 	// free(str);
-		// 	// char w = s[i - 1];
-			// i = 0;
-			// while(s[i])
-			// {
-				// if (s[i] == 64 && s[i] == 72 && s[i] == 64
-				// 	&& s[i] == 80 && s[i] == 96 && s[i] == 32 && s[i] == 24
-				// 	&& s[i] == 16 && s[i] == 8 && s[i] == 0)
-				// 	i++;
-		// 		// write(1, "&", 1);
-				// write(1, &s[i], 1);
-		// 		// write(1, "\n", 1);
-				// i++;
-			// }
-			// write(1 , &s[0], i);
-		// }	
 		rx.start = l + rx.space;
 	}
 	if (f->weidth >= l)

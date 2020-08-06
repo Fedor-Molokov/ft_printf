@@ -6,13 +6,13 @@
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 11:49:51 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 10:39:34 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:42:12 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		to_weidth_decimal_min(char *ap, int precision, int *len, t_flags *f)
+void		to_weid_dec_min(char *ap, int precision, int *len, t_flags *f)
 {
 	if (f->space && (ap[0] != '-' || ap[0] != '0') && \
 	f->type != 'u' && (f->weidth || f->precision) && \
@@ -23,7 +23,7 @@ void		to_weidth_decimal_min(char *ap, int precision, int *len, t_flags *f)
 	}
 	!(f->precision == 0 && f->dot) ? print_str_decimal(ap, len, f) : 1;
 	f->space ? (*len)++ : 1;
-	print_space_decimal(ap, &precision, *len, f);
+	print_space_dec(ap, &precision, *len, f);
 }
 
 void		print_zero_decimal_next(char *ap, t_flags *f, int i)

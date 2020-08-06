@@ -6,7 +6,7 @@
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 10:34:52 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 11:11:31 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:45:52 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,30 +66,29 @@ typedef struct	s_count_d
 union			u_longint_double
 {
 	long		long_val;
-	long double	idouble_val;
+	long double	double_val;
 };
 
-void			to_weidth_decimal_n_n(char *ap, int precision, int *len, t_flags *f);
-void			ft_space_bit_next(char *tmp, char *buff, int *res, t_count_d *count);
-void			to_weidth_decimal_min(char *ap, int precision, int *len, t_flags *f);
-void			print_space_decimal(char *ap, int *precision, int len, t_flags *f);
-void			print_space_decimal(char *ap, int *precision, int len, t_flags *f);
-char			*ft_str_connection(char *entire, char *bufer, char *sign, int p);
-int				to_weidth_decimal(char *ap, int precision, int *len, t_flags *f);
-void			ft_count_num_ull(unsigned long long n, char *buff, int *res);
+void			to_weid_dec_n_n(char *ap, int precision, int *len, t_flags *f);
+void			ft_sp_bit_n(char *tmp, char *buff, int *res, t_count_d *count);
+void			to_weid_dec_min(char *ap, int precision, int *len, t_flags *f);
+void			print_space_dec(char *ap, int *precision, int len, t_flags *f);
+char			*ft_str_connect(char *entire, char *bufer, char *sign, int p);
 void			print_str_decimal_next(char *ap, int *len, t_flags *f, int i);
+int				to_weidth_dec(char *ap, int precision, int *len, t_flags *f);
+void			ft_count_num_ull(unsigned long long n, char *buff, int *res);
 int				out_num(const char *format, int size1, int size, int start);
-void			ft_count_bit(unsigned long long n, char *buff, int *res);
-void			to_weidth_decimal_next_n_n(char *ap, int *len, t_flags *f);
 int				calc_float(t_flags *f, va_list ap, char *buff, char *str);
 void			ft_space_bit(char *tmp, char *buff, int *res, t_flags *f);
-void			ft_count_num_ul(unsigned long n, char *buff, int *res);
-void			ft_count_num_ui(unsigned int n, char *buff, int *res);
-int				to_weidth_decimal_next(char *ap, int *len, t_flags *f);
+void			ft_count_bit(unsigned long long n, char *buff, int *res);
 void			l_less_next_n(char *s, t_flags *f, int l, t_count_d *rx);
 void			l_less_next(char *s, t_flags *f, int l, t_count_d *rx);
-void			ft_count_num_ll(long long n, char *buff, int *res);
+void			to_weidth_dec_next_n_n(char *ap, int *len, t_flags *f);
+void			ft_count_num_ul(unsigned long n, char *buff, int *res);
+void			ft_count_num_ui(unsigned int n, char *buff, int *res);
 void			print_zero_decimal_next(char *ap, t_flags *f, int i);
+int				to_weidth_dec_next(char *ap, int *len, t_flags *f);
+void			ft_count_num_ll(long long n, char *buff, int *res);
 void			print_zero_decimal(char *ap, int *len, t_flags *f);
 void			fill_type(const char *ft, t_flags *tmp, int start);
 void			print_zero_decimal(char *ap, int *len, t_flags *f);
@@ -100,39 +99,38 @@ void			print_str_decimal(char *ap, int *len, t_flags *f);
 int				ft_div_base(unsigned long long value, int base);
 int				all_formats(const char *ft, int i, va_list ap);
 void			to_null(t_flags *f, const char *ft, int start);
-void			ft_count_num_l(long n, char *buff, int *res);
-void			ft_count_num_l(long n, char *buff, int *res);
 void			print_hex(long nb, int *pointlen, t_flags *f);
-void			ft_count_num_i(int n, char *buff, int *res);
 int				l_big_next(char *s, t_flags *f, int l, int x);
+void			ft_count_num_l(long n, char *buff, int *res);
+void			ft_count_num_l(long n, char *buff, int *res);
 void			fill_len(const char *ft, t_flags *tm, int c);
+void			ft_count_num_i(int n, char *buff, int *res);
 int				convert_to_l(unsigned long src, t_flags *f);
 int				how_much_l(unsigned long tmp, t_flags *f);
 int				print_char_decimal(t_flags *f, char *ap);
-void			ft_putnstr(char *str, int n, int end);
 int				to_weidth(char *ap, int c, t_flags *f);
 int				how_much(unsigned int tmp, t_flags *f);
 int				print_address(t_flags *f, va_list ap);
+void			ft_putnstr(char *str, int n, int end);
 void			ft_to_str(char (*bufer)[70], int n);
-int				ft_printf(const char *format, ...);
-int				ft_circ(char (*bufer)[70], int p);
 int				print_num_str(char *s, t_flags *f);
 int				l_less(char *s, t_flags *f, int l);
 void			put_zero(int s, int p, t_flags *f);
 int				print_float(t_flags *f, char *ap);
-int				find_le(const char *ft, int st);
+int				ft_circ(char (*bufer)[70], int p);
 int				l_big(char *s, t_flags *f, int l);
-int				ft_printf(const char *ft, ...);
 int				print_ch(t_flags *f, va_list ap);
 void			print_space(int len, t_flags *f);
+int				find_le(const char *ft, int st);
 int				convert(va_list ap, t_flags *f);
 void			if_hash(char **dst, t_flags *f);
+int				ft_printf(const char *ft, ...);
 void			print_space(int c, t_flags *f);
 void			print_zero(int c, t_flags *f);
 void			print_space_float(t_use *box);
-void			print_str(char *ap, int l);
 void			put_space(int l, t_flags *f);
 char			do_16_abc(int t, t_flags *f);
+void			print_str(char *ap, int l);
 void			ft_decminus(t_use *box);
 void			only_zero(char *s);
 

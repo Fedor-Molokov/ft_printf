@@ -6,13 +6,13 @@
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 21:55:35 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 09:53:48 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:42:36 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_str_connection(char *entire, char *bufer, char *sign, int p)
+char	*ft_str_connect(char *entire, char *bufer, char *sign, int p)
 {
 	int		len;
 	char	*res;

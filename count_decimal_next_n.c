@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_decimal_next_n.c                             :+:      :+:    :+:   */
+/*   count_dec_next_n.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmarsell <dmarsell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/05 15:57:16 by dmarsell          #+#    #+#             */
-/*   Updated: 2020/08/06 10:51:28 by dmarsell         ###   ########.fr       */
+/*   Updated: 2020/08/06 11:41:25 by dmarsell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_space_bit_next(char *tmp, char *buff, int *res, t_count_d *count)
+void	ft_sp_bit_n(char *tmp, char *buff, int *res, t_count_d *count)
 {
 	int		j;
 	int		i;
@@ -59,7 +59,7 @@ void	ft_space_bit(char *tmp, char *buff, int *res, t_flags *f)
 		count.space = 7;
 		count.start = 63;
 	}
-	ft_space_bit_next(tmp, buff, res, &count);
+	ft_sp_bit_n(tmp, buff, res, &count);
 }
 
 void	ft_count_bit(unsigned long long n, char *buff, int *res)
